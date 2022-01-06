@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="book" class="com.atguigu.spring5.Book">
+        <!-- 使用set方法进行注入属性 -->
+        <property name="bookName" value="易筋经"></property>
+        <property name="bookAuther" value="达摩老祖"></property>
+    </bean>
+
+    <bean id="orders" class="com.atguigu.spring5.Orders">
+        <constructor-arg name="orderName" value="computer"></constructor-arg>
+        <constructor-arg name="address" value="China"></constructor-arg>
+    </bean>
+
+    <!-- 尝试使用xml注入其他类型属性 -->
+    <bean id="booknull" class="com.atguigu.spring5.Book">
+        <property name="bookName" value="九阳神功"></property>
+        <!-- 注入空值 -->
+        <property name="bookAuther">
+            <null/>
+        </property>
+    </bean>
+    <bean id="bookspecial" class="com.atguigu.spring5.Book">
+        <!-- 注入特殊符号 -->
+        <property name="bookName">
+            <value><![CDATA[<<南京!>>]]></value>
+        </property>
+    </bean>
+
+</beans>
