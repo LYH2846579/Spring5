@@ -15,4 +15,23 @@
     <bean id="book" class="com.atguigu.spring5.Book">
         <property name="list" ref="booklist"></property>
     </bean>
+
+
+    <!-- 工厂Bean配置 -->
+    <!-- 虽然配置的为MyBean但是可以返回其他类型的对象 -->
+    <bean id="myBean" class="com.atguigu.factoryBean.MyBean"></bean>
+
+    <!-- 单实例与多实例比较 -->
+    <bean id="booksingleton" class="com.atguigu.spring5.Book"></bean>
+    <bean id="bookprototype" class="com.atguigu.spring5.Book" scope="prototype"></bean>
+
+
+    <!-- Bean生命周期的探索 -->
+    <bean id="lifecycle" class="com.atguigu.lifecycle.Order" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="oName" value="phone"></property>
+    </bean>
+
+    <!-- 配置后置处理器 -->
+    <!-- 会为当前页面之中所有的Bean配置 -->
+    <bean id="myBeanPost" class="com.atguigu.lifecycle.MyBeanPost"></bean>
 </beans>

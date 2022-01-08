@@ -26,12 +26,12 @@ public class Book
         this.bookAuther = bookAuther;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Book{" +
                 "bookName='" + bookName + '\'' +
                 ", bookAuther='" + bookAuther + '\'' +
                 ", list=" + list +
                 '}';
-    }
+    }*/
 }

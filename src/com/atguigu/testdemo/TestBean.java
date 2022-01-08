@@ -2,6 +2,7 @@ package com.atguigu.testdemo;
 
 import com.atguigu.bean.Emp;
 import com.atguigu.collectiontype.Stu;
+import com.atguigu.lifecycle.Order;
 import com.atguigu.service.UserService;
 import com.atguigu.spring5.Book;
 import org.junit.Test;
@@ -46,11 +47,45 @@ public class TestBean
         stu.output();
     }
 
-    @Test
+    @Test   //测试Util提取注入
     public void test05()
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
         Book book = context.getBean("book", Book.class);
         System.out.println(book.toString());
+    }
+
+    @Test   //测试工厂Bean -> 可以返回不同的Bean!
+    public void test06()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+        Book book = context.getBean("myBean", Book.class);
+        System.out.println(book.toString());
+    }
+
+    @Test   //测试单实例和多实例
+    public void test07()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+        Book book1 = context.getBean("booksingleton", Book.class);
+        Book book2 = context.getBean("booksingleton", Book.class);
+        System.out.println(book1);
+        System.out.println(book2);
+
+        Book book3 = context.getBean("bookprototype", Book.class);
+        Book book4 = context.getBean("bookprototype", Book.class);
+        System.out.println(book3);
+        System.out.println(book4);
+    }
+
+    @Test   //Bean生命周期探索
+    public void test08()
+    {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+        Order order = context.getBean("lifecycle", Order.class);
+        System.out.println("创建Bean的实例对象");
+        System.out.println(order);
+        //手动使得Bean实例销毁
+        context.close();
     }
 }
