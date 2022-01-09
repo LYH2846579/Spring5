@@ -3,11 +3,12 @@ package com.atguigu.testdemo;
 import com.atguigu.bean.Emp;
 import com.atguigu.collectiontype.Stu;
 import com.atguigu.lifecycle.Order;
-import com.atguigu.service.UserService;
+import com.atguigu.annotation.UserService;
 import com.atguigu.spring5.Book;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 /**
  * @author LYHstart
@@ -87,5 +88,13 @@ public class TestBean
         System.out.println(order);
         //手动使得Bean实例销毁
         context.close();
+    }
+
+    @Test   //测试使用注解创建对象
+    public void test09()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean5.xml");
+        UserService service = context.getBean("userService", UserService.class);
+        service.add();
     }
 }

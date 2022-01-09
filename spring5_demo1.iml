@@ -18,6 +18,7 @@
           <file>file://$MODULE_DIR$/src/bean1.xml</file>
           <file>file://$MODULE_DIR$/src/bean3.xml</file>
           <file>file://$MODULE_DIR$/src/bean4.xml</file>
+          <file>file://$MODULE_DIR$/bean5.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -85,5 +86,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="spring-aop-5.2.6.RELEASE" level="project" />
   </component>
 </module>
