@@ -1,6 +1,5 @@
-package com.atguigu.annotation;
+package com.atguigu.IOC.annotation;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 
 /**

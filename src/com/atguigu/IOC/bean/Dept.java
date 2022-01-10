@@ -1,4 +1,4 @@
-package com.atguigu.bean;
+package com.atguigu.IOC.bean;
 
 /**
  * @author LYHstart

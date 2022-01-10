@@ -1,7 +1,6 @@
-package com.atguigu.service;
+package com.atguigu.IOC.service;
 
-import com.atguigu.dao.UserDao;
-import com.atguigu.dao.UserDaoImpl;
+import com.atguigu.IOC.dao.UserDao;
 
 /**
  * @author LYHstart

@@ -1,8 +1,8 @@
-package com.atguigu.testdemo;
+package com.atguigu.IOC.testdemo;
 
-import com.atguigu.spring5.Book;
-import com.atguigu.spring5.Orders;
-import com.atguigu.spring5.User;
+import com.atguigu.IOC.spring5.Book;
+import com.atguigu.IOC.spring5.Orders;
+import com.atguigu.IOC.spring5.User;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;

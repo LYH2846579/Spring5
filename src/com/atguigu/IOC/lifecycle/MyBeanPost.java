@@ -1,4 +1,4 @@
-package com.atguigu.lifecycle;
+package com.atguigu.IOC.lifecycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

@@ -1,10 +1,10 @@
-package com.atguigu.testdemo;
+package com.atguigu.IOC.testdemo;
 
-import com.atguigu.bean.Emp;
-import com.atguigu.collectiontype.Stu;
-import com.atguigu.lifecycle.Order;
-import com.atguigu.annotation.UserService;
-import com.atguigu.spring5.Book;
+import com.atguigu.IOC.bean.Emp;
+import com.atguigu.IOC.collectiontype.Stu;
+import com.atguigu.IOC.lifecycle.Order;
+import com.atguigu.IOC.annotation.UserService;
+import com.atguigu.IOC.spring5.Book;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

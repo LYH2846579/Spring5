@@ -1,6 +1,6 @@
-package com.atguigu.factoryBean;
+package com.atguigu.IOC.factoryBean;
 
-import com.atguigu.spring5.Book;
+import com.atguigu.IOC.spring5.Book;
 import org.springframework.beans.factory.FactoryBean;
 
 /**

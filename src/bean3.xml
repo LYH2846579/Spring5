@@ -4,37 +4,37 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 外部Bean注入测试 -->
-    <bean id="userService" class="com.atguigu.service.UserService">
+    <bean id="userService" class="com.atguigu.IOC.service.UserService">
         <property name="userDao" ref="userDaoImpl"></property>
     </bean>
     <!-- 确实会默认加载! -->
-    <bean id="userDaoImpl" class="com.atguigu.dao.UserDaoImpl"></bean>
+    <bean id="userDaoImpl" class="com.atguigu.IOC.dao.UserDaoImpl"></bean>
 
     <!-- 内部Bean注入和级联注入 -->
-    <bean id="emp" class="com.atguigu.bean.Emp">
+    <bean id="emp" class="com.atguigu.IOC.bean.Emp">
         <property name="eName" value="Jack"></property>
         <property name="gender" value="男"></property>
         <property name="dept">
             <!-- 内部Bean -->
-            <bean id="dept" class="com.atguigu.bean.Dept">
+            <bean id="dept" class="com.atguigu.IOC.bean.Dept">
                 <property name="dname" value="安保部"></property>
             </bean>
         </property>
     </bean>
 
     <!-- 级联赋值 -->
-    <bean id="emp1" class="com.atguigu.bean.Emp">
+    <bean id="emp1" class="com.atguigu.IOC.bean.Emp">
         <property name="eName" value="rose"></property>
         <property name="gender" value="女"></property>
         <property name="dept" ref="dept1"></property>
         <property name="dept.dname" value="技术部"></property>
     </bean>
-    <bean id="dept1" class="com.atguigu.bean.Dept">
+    <bean id="dept1" class="com.atguigu.IOC.bean.Dept">
         <property name="dname" value="财务部"></property>
     </bean>
 
     <!-- 注入集合 -->
-    <bean id="stu" class="com.atguigu.collectiontype.Stu">
+    <bean id="stu" class="com.atguigu.IOC.collectiontype.Stu">
         <!-- 注入数组 -->
         <property name="array">
             <array>

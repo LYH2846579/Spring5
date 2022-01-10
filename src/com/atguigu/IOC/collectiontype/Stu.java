@@ -1,6 +1,5 @@
-package com.atguigu.collectiontype;
+package com.atguigu.IOC.collectiontype;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;

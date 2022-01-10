@@ -6,15 +6,15 @@
                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
         <!-- 全扫描方式 -->
-        <!--<context:component-scan base-package="com.atguigu.annotation"></context:component-scan>-->
+        <!--<context:component-scan base-package="com.atguigu.IOC.annotation"></context:component-scan>-->
 
         <!-- 单独扫描一种类型 -->
-        <!--<context:component-scan base-package="com.atguigu.annotation" use-default-filters="false">
+        <!--<context:component-scan base-package="com.atguigu.IOC.annotation" use-default-filters="false">
             <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"></context:include-filter>
         </context:component-scan>-->
 
         <!-- 排除一种类型 -->
-        <context:component-scan base-package="com.atguigu.annotation">
+        <context:component-scan base-package="com.atguigu.IOC.annotation">
             <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
         </context:component-scan>
 </beans>
