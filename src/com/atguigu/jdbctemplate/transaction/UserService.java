@@ -30,7 +30,7 @@ public class UserService
     public void accountMoneySafe()
     {
         dao.reduceMoney();
-        int i = 1 / 0;
+        //int i = 1 / 0;
         dao.addMoney();
     }
 }
